@@ -1,20 +1,25 @@
-const express = require('express'); // Me traigo express
+const express = require('express');
 const path = require('path')
-const app = express(); // Ejecutamos la función que traigo de express
+const app = express();
 
-// 1) npm init
-// 2) npm install express
-// 3) Crear app.js
-// 4) node app.js
+const port = 3030;
 
-const port = 3000;
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-    res.send('Hola desde mi primer servidor con express');
+    res.sendFile(path.join(__dirname, './views/index.html'));
 });
 
-app.get('/facu', (req, res) => {
-    res.sendFile(path.join(__dirname, './index.html'));
+app.get('/babbage', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/babbage.html'));
+});
+
+app.get('/berners-lee', (req, res) => {
+    res.sendFile(path.join(__dirname, './views//berners-lee.html'));
+});
+
+app.get('/clarke', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/clarke.html'));
 });
 
 app.listen(port,() => {
