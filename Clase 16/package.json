@@ -1,0 +1,14 @@
+{
+  "name": "clase16",
+  "version": "1.0.0",
+  "description": "Ejemplos clase 16 - Servidores",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Facu Erbin",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
